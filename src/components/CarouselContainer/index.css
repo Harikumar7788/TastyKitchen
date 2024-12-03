@@ -9,7 +9,7 @@
 
 /* Ensure the carousel slider images are aligned properly */
 .slider-img {
-  width: 100%;  /* Ensure the image takes full width */
+  width: 100%; /* Ensure the image takes full width */
   height: auto; /* Adjust height based on aspect ratio */
   object-fit: cover; /* Ensure the image covers the area of the container */
 }
@@ -49,7 +49,7 @@
 
 /* Image styling */
 .restaurant-failure-img {
-  width: 100%;  /* Adjusting to use full width on mobile */
+  width: 100%; /* Adjusting to use full width on mobile */
   height: 300px; /* Initial height for mobile screens */
 }
 
@@ -64,20 +64,20 @@
 @media screen and (max-width: 767px) {
   /* Increased height for better mobile view */
   .restaurant-failure-img {
-    width: 100%;  /* Increase the width to 100% of its container */
+    width: 100%; /* Increase the width to 100% of its container */
     height: 500px; /* Increase the height for better mobile view */
   }
 
   .slider-img {
-    width: 100%;  /* Ensure the image fills the entire width */
+    width: 100%; /* Ensure the image fills the entire width */
     height: 150px; /* Increased height for the mobile images */
     object-fit: cover; /* Cover the area of the container */
   }
 
   /* Optional: Adjust the carousel container padding for mobile */
   .carousel {
-    padding: 0;  /* Remove padding for a more compact mobile view */
-    margin: 0;  /* Remove margin for a better view */
+    padding: 0; /* Remove padding for a more compact mobile view */
+    margin: 0; /* Remove margin for a better view */
   }
 }
 

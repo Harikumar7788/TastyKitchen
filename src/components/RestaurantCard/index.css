@@ -192,7 +192,7 @@
 @media screen and (min-width: 1025px) {
   .restaurant-item {
     flex-direction: row;
-    padding: 30px;  /* Increased padding for large screens */
+    padding: 30px; /* Increased padding for large screens */
   }
 
   .thumbnail {
@@ -203,7 +203,7 @@
 
   .card-content-container {
     width: 250px;
-    padding: 20px;  /* Added padding inside the content container */
+    padding: 20px; /* Added padding inside the content container */
   }
 
   .restaurant-name {

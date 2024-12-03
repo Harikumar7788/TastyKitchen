@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -142,7 +143,7 @@ body, html {
 .nav-link {
   text-decoration: none;
   color: #eb7a34;
-  list-style-type:none;
+  list-style-type: none;
 }
 
 .nav-menu-item:hover {
@@ -207,7 +208,7 @@ body, html {
   .nav-large-menu-container {
     display: none;
   }
-  .icons{
+  .icons {
     list-style-type: none;
   }
 
@@ -242,7 +243,7 @@ body, html {
     font-size: 16px;
     list-style-type: none;
   }
-  .nav-link{
+  .nav-link {
     list-style-type: none;
   }
 }
