@@ -16,12 +16,18 @@ export default function Footer() {
           className="footer-logo"
           alt="website-footer-logo"
         />
-        <h1 className="footer-heading">Tasty Kitchen </h1>
+        <h1 className="footer-heading">Tasty Kitchen</h1>
       </div>
 
       <p className="footer-description">
-        The only thing we are serious about is food. Contact us on
+        The only thing we are serious about is food. Contact us on:
       </p>
+
+      <div className="contact-info">
+        <p className="contact-email">info@tastykitchen.com</p>
+        <p className="contact-phone">+1 234 567 890</p>
+      </div>
+
       <div className="social-media-container">
         <FaPinterestSquare
           className="social-media-icon"
@@ -36,6 +42,12 @@ export default function Footer() {
           className="social-media-icon"
           testid="facebook-social-icon"
         />
+      </div>
+
+      <div className="footer-bottom">
+        <p className="footer-bottom-text">
+          © 2024 Tasty Kitchen. All Rights Reserved.
+        </p>
       </div>
     </div>
   )

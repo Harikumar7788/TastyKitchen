@@ -40,7 +40,7 @@ const CartItem = props => (
                 className="quantity-controller-button"
                 onClick={onClickDecrement}
               >
-                <BsDashSquare color="#52606D" size={12} />
+                <BsDashSquare color="#52606D" size={14} />
               </button>
               <p className="cart-quantity">{quantity}</p>
               <button
@@ -48,12 +48,12 @@ const CartItem = props => (
                 className="quantity-controller-button"
                 onClick={onClickIncrement}
               >
-                <BsPlusSquare color="#52606D" size={12} />
+                <BsPlusSquare color="#52606D" size={14} />
               </button>
             </div>
-          </div>
-          <div className="total-price-remove-container">
             <p className="cart-total-price">Rs {totalPrice}/-</p>
+          </div>
+          <div className="remove-container">
             <button
               className="remove-button"
               type="button"
@@ -61,14 +61,14 @@ const CartItem = props => (
             >
               Remove
             </button>
+            <button
+              className="delete-button"
+              type="button"
+              onClick={onRemoveCartItem}
+            >
+              <AiFillCloseCircle color="#616E7C" size={20} />
+            </button>
           </div>
-          <button
-            className="delete-button"
-            type="button"
-            onClick={onRemoveCartItem}
-          >
-            <AiFillCloseCircle color="#616E7C" size={20} />
-          </button>
         </li>
       )
     }}

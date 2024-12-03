@@ -29,17 +29,17 @@ const Header = props => {
             </li>
           </Link>
           <div className="nav-menu">
-            <li>
+            <li className="icons">
               <Link to="/">
                 <AiFillHome className="nav-mobile-symbol nav-home-symbol" />
               </Link>
             </li>
-            <li>
+            <li className="icons">
               <Link to="/cart">
                 <BsFillCartFill className="nav-mobile-symbol" />
               </Link>
             </li>
-            <li>
+            <li className="icons">
               <button type="button" className="nav-mobile-btn">
                 <FiLogOut className="logout" onClick={onClickLogout} />
               </button>

@@ -1,224 +1,181 @@
-.login-form-container {
+.BgContainer {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 90%;
-  max-width: 1110px;
-  margin: auto;
+}
+.LoginContainer {
+  display: flex;
+  flex-direction: column;
+  height: 634px;
+  width: 356px;
+  border-radius: 0px;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.Logo {
+  display: none;
+}
+.Rectangle {
+  height: 285px;
+  width: 285px;
+  position: top relative;
+  align-self: flex-end;
 }
 
-@media screen and (min-width: 992px) {
-  .login-form-container {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 0px;
-  }
-}
-
-.login-heading {
-  font-family: 'DM Sans';
+.LoginHeading {
+  height: 32px;
+  width: 60px;
+  left: 24px;
+  top: 296px;
+  align-self: flex-start;
+  font-family: DM Sans;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 40px;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
   color: #0f172a;
+  margin-left: 16px;
 }
-
-.login-website-logo-mobile-img {
-  width: 165px;
-  margin-top: 50px;
-  margin-bottom: 35px;
-}
-
-@media screen and (min-width: 992px) {
-  .login-website-logo-mobile-img {
-    display: none;
-  }
-}
-
-.login-img {
-  width: 387px;
-  height: 387px;
-  top: -38px;
-  left: 94px;
-  border-radius: 249.94px;
-  position: relative;
-}
-
-@media screen and (min-width: 992px) {
-  .login-img {
-    width: 50%;
-    height: 100vh;
-    max-width: 524px;
-    flex-shrink: 1;
-    order: 2;
-    top: 0px;
-    left: 0px;
-    border-radius: 0px;
-  }
-}
-
-.login-website-logo-desktop-img {
-  width: 185px;
-}
-
-@media screen and (max-width: 991px) {
-  .login-website-logo-desktop-img {
-    display: none;
-  }
-}
-
-.form-container {
+.FormContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 350px;
+  width: 356px;
+  padding: 16px;
 }
-
-@media screen and (min-width: 992px) {
-  .form-container {
-    width: 350px;
-    flex-shrink: 0;
-    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
-    padding: 64px 48px 64px 48px;
-  }
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.input-label {
-  margin-bottom: 0px;
-  font-family: 'Roboto';
-  font-weight: bold;
+.FormContainer .LabelElement {
+  height: 16px;
+  width: 66px;
+  left: 0px;
+  top: 0px;
+  border-radius: nullpx;
+  font-family: DM Sans;
   font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
   color: #475569;
+  margin-bottom: 6px;
 }
-
-.username-input-field {
-  font-size: 14px;
+.FormContainer .InputElement {
   height: 40px;
-  border: 1px solid #d7dfe9;
-  background-color: #e2e8f0;
-  color: #64748b;
-  border-radius: 2px;
-  margin-top: 5px;
-  padding: 8px 16px 8px 16px;
-  outline: none;
-}
-
-.password-input-field {
-  font-size: 14px;
-  height: 40px;
-  border: 1px solid #d7dfe9;
-  background-color: #e2e8f0;
-  color: #64748b;
-  border-radius: 2px;
-  margin-top: 5px;
-  padding: 8px 16px 8px 16px;
-  outline: none;
-}
-
-.login-button {
-  font-family: 'Roboto';
-  font-weight: bold;
-  font-size: 14px;
-  color: #ffffff;
-  height: 40px;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 2px;
-  background-color: #fcb103;
-  border-radius: 8px;
+  padding:12px;
+  left: 16px;
+  top: 24px;
+  border-radius: 4px;
+  background: #e2e8f0;
   border: none;
-  cursor: pointer;
-  outline: none;
+  margin-bottom: 18px;
 }
-
-.error-message {
-  align-self: start;
-  font-size: 12px;
-  margin-top: 3px;
-  margin-bottom: 0px;
-  font-family: 'Roboto';
-  font-size: 12px;
-  line-height: 16px;
-  color: #ff0b37;
+.FormContainer .LoginButton {
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  background: #f7931e;
+  border: none;
+  align-self: stretch;
+  color: #ffffff;
 }
-
-.logo-container-sm {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  .logo-container-sm {
-    display: none;
-  }
-}
-.logo-container-lg {
+.BgContainer .LargeImage {
   display: none;
 }
 
-@media screen and (min-width: 992px) {
-  .logo-container-lg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media screen and (min-width: 750px) {
+  .BgContainer {
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
     align-items: center;
   }
-}
-
-.logo-icon {
-  height: 40px;
-  width: 40px;
-  color: orange;
-}
-
-.logo-content {
-  font-family: 'Roboto';
-  font-size: 20px;
-  font-weight: 700;
-  color: #ff0b37;
-  padding-top: 12px;
-}
-
-@media screen and (min-width: 992px) {
-  .logo-content {
-    font-size: 15px;
+  .BgContainer .LargeImage {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+    order: 2;
+    align-self: right;
   }
-}
-
-.login-website-logo-desktop-img {
-  width: 25px;
-}
-
-@media screen and (max-width: 991px) {
-  .login-website-logo-desktop-img {
+  .Rectangle {
     display: none;
   }
+  .LoginContainer {
+    height: 523px;
+    width: 456px;
+    left: 165px;
+    top: 250px;
+    border-radius: 8px;
+    background: #fefeff;
+    box-shadow: 0px 8px 40px 0px #07070714;
+    margin: 20px;
+    margin-left: 150px;
+  }
+  .LoginHeading {
+    align-self: center;
+  }
+}
+.LoginContainer .ShowPasswordBox {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  align-items: center;
+  height: auto;
+  margin-bottom: 16px;
+}
+.LoginContainer .ShowPasswordBox .CheckboxElement {
+  width: 20px;
+  height: 20px;
+}
+.LoginContainer .ShowPasswordBox .ShowPasswordLabel {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569;
+  font-family: roboto;
 }
 
-.login-website-logo-mobile-img {
-  width: 21px;
-  margin-top: 50px;
-  margin-bottom: 35px;
+.ErrorMsg {
+  height: 18px;
+  width: 273px;
+  left: 213px;
+  top: 654px;
+  border-radius: nullpx;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ef4444;
 }
 
-@media screen and (min-width: 992px) {
-  .login-website-logo-mobile-img {
-    display: none;
+.LoginContainer .LargeHeading {
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  .LoginContainer .LargeHeading {
+    display: block;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: #f7931e;
+
+    text-align: left;
+  }
+  .Logo {
+    display: block;
   }
 }

@@ -1,96 +1,226 @@
 .restaurant-item {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-left: 12px;
-  padding-top: 22px;
-  padding-bottom: 18px;
+  align-items: flex-start;
+  padding: 10px;
   margin: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .link-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #475569;
+  width: 100%;
 }
 
 .thumbnail {
-  width: 160px;
-  height: 100px;
-  border-radius: 8px;
-  margin-right: 12px;
+  width: 250px; /* Fixed width for all screen sizes */
+  height: 250px; /* Fixed height for all screen sizes to maintain aspect ratio */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.card-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px; /* Fixed width for all screen sizes */
+  box-sizing: border-box;
 }
 
 .restaurant-name {
-  font: 'DM Sans';
-  weight: 700;
-  style: normal;
-  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
   color: #334155;
-  margin-top: 0px;
+  margin: 0;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-  .restaurant-name {
-    font-size: 16px;
-  }
+.restaurant-name:hover {
+  color: #f7931e;
 }
 
 .cuisine-name {
-  font: 'DM Sans';
-  weight: 400;
-  style: normal;
-  size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   color: #64748b;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 768px) {
-  .cuisine-name {
-    font-size: 14px;
-  }
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .rating-review-count-container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  margin-top: 8px;
 }
 
 .star {
   width: 18px;
   height: 18px;
   color: #ffcc00;
-  margin-left: 12px;
+  margin-right: 6px;
 }
 
 .rating {
-  font-family: 'DM Sans';
-  weight: 700;
-  style: normal;
-  size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
   color: #1e293b;
-  padding-top: 16px;
-  padding-left: 4px;
 }
 
 .total-reviews {
-  font-family: 'DM Sans';
-  weight: 400;
-  style: normal;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
   font-size: 14px;
   color: #64748b;
-  padding-left: 5px;
-  padding-top: 8px;
+  margin-left: 6px;
 }
 
-.card-content-container {
-  width: 174px;
-  height: 78px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Hover Effects */
+.rating-review-count-container:hover .star {
+  color: #f7931e;
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile and Small Tablets */
+@media screen and (max-width: 768px) {
+  .restaurant-item {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .thumbnail {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .card-content-container {
+    width: 250px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .restaurant-name {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .cuisine-name {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .rating {
+    font-size: 14px;
+  }
+
+  .total-reviews {
+    font-size: 12px;
+  }
+
+  .rating-review-count-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablets and Larger Screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant-item {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .thumbnail {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+  }
+
+  .card-content-container {
+    width: 250px;
+    text-align: left;
+  }
+
+  .restaurant-name {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .cuisine-name {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .rating {
+    font-size: 15px;
+  }
+
+  .total-reviews {
+    font-size: 13px;
+  }
+}
+
+/* Large Screens (Laptops and Desktops) */
+@media screen and (min-width: 1025px) {
+  .restaurant-item {
+    flex-direction: row;
+    padding: 30px;  /* Increased padding for large screens */
+  }
+
+  .thumbnail {
+    width: 250px;
+    height: 250px;
+    margin-right: 30px;
+  }
+
+  .card-content-container {
+    width: 250px;
+    padding: 20px;  /* Added padding inside the content container */
+  }
+
+  .restaurant-name {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .cuisine-name {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .rating {
+    font-size: 16px;
+  }
+
+  .total-reviews {
+    font-size: 14px;
+  }
 }

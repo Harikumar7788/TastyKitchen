@@ -1,3 +1,4 @@
+/* Header Container */
 .restaurant-header {
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,10 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  padding:32px;
+  background-color: #f5f7fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -17,36 +22,45 @@
   }
 }
 
+/* Heading and Description */
 .restaurant-list-heading {
   color: #183b56;
-  font-family: 'Roboto';
-  font-size: 20px;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 768px) {
   .restaurant-list-heading {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
 .restaurant-list-description {
   color: #64748b;
-  font-family: 'Roboto';
-  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 1.5;
+  max-width: 380px;
+  margin-top: 5px;
 }
 
 @media screen and (min-width: 768px) {
   .restaurant-list-description {
     font-size: 18px;
+    max-width: 500px;
   }
 }
 
+/* Sort By Section */
 .sort-by-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .sort-by-icon {
@@ -60,29 +74,65 @@
   align-items: center;
   justify-content: center;
   padding-top: 12px;
+  padding:32px;
 }
 
 .sort-by {
   color: #475569;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .sort-by-select {
   color: #475569;
   background-color: #ffffff;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  border: none;
-  padding-top: 12px;
-  outline: none;
+  border: 2px solid #d0d5dd;
+  padding: 12px;
+  width:150px;
+  margin-left: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  padding-left: 12px;
+  outline: none;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.sort-by-select:hover {
+  background-color: #f1f5f9;
+  border-color: #3b82f6;
 }
 
 .select-option {
   color: #7e858e;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  padding: 8px 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .restaurant-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+  }
+
+  .sort-by-container {
+    margin-top: 20px;
+  }
+
+  .restaurant-list-heading {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .restaurant-list-description {
+    font-size: 16px;
+    text-align: left;
+    max-width: 100%;
+  }
 }

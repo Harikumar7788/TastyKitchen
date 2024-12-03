@@ -1,8 +1,6 @@
 import {AiFillStar} from 'react-icons/ai'
 import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
-
 import CartContext from '../../context/CartContext'
-
 import './index.css'
 
 const FoodItemCard = props => {
@@ -22,7 +20,6 @@ const FoodItemCard = props => {
         const foodObject = cartData.filter(
           eachCartItem => eachCartItem.id === foodData.id,
         )
-
         const quantity = foodObject.length > 0 ? foodObject[0].quantity : 1
 
         const onClickAddToCart = () => {
@@ -56,7 +53,7 @@ const FoodItemCard = props => {
                     className="quantity-controller-button"
                     onClick={onClickDecrement}
                   >
-                    <BsDashSquare color="#52606D" size={12} />
+                    <BsDashSquare color="#52606D" size={18} />
                   </button>
                   <p className="cart-quantity">{quantity}</p>
                   <button
@@ -64,7 +61,7 @@ const FoodItemCard = props => {
                     className="quantity-controller-button"
                     onClick={onClickIncrement}
                   >
-                    <BsPlusSquare color="#52606D" size={12} />
+                    <BsPlusSquare color="#52606D" size={18} />
                   </button>
                 </div>
               ) : (
@@ -73,7 +70,7 @@ const FoodItemCard = props => {
                   className="add-button"
                   onClick={onClickAddToCart}
                 >
-                  Add
+                  Add to Cart
                 </button>
               )}
             </div>
